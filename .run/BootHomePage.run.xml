@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BootHomePage" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.jwebmp.examples.apps.homepage.BootHomePage" />
+    <module name="jwebmphomepage" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

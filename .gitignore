@@ -1,0 +1,34 @@
+/target/
+/.idea/
+*.iml
+
+#**.min.css
+#**.min.js
+#**.map
+
+#Font awesome premium
+#/src/main/resources/META-INF/resources/font-awesome/
+#Minton premium theme files
+#/src/main/resources/META-INF/resources/app.css
+#/src/main/resources/META-INF/resources/app.js
+#/src/main/resources/META-INF/resources/app-dark.css
+#/src/main/resources/META-INF/resources/bootstrap.css
+#/src/main/resources/META-INF/resources/bootstrap-dark.css
+#/src/main/resources/META-INF/resources/icons.css
+#/src/main/resources/META-INF/resources/layout.js
+
+#To be moved to the home page demo when finished
+#/src/main/java/com/jwebmp/examples/apps/homepage/BootHomePage.java
+#/src/main/java/com/jwebmp/examples/apps/homepage/DemoBody.java
+#/src/main/java/com/jwebmp/examples/apps/homepage/DemoLogoBox.java
+#/src/main/java/com/jwebmp/examples/apps/homepage/HomePage.java
+#/src/main/resources/META-INF/resources/css/
+/src/main/resources/META-INF/resources/js/app.js
+/src/main/resources/META-INF/resources/js/app.min.js
+/src/main/resources/META-INF/resources/js/app.min.js.map
+/src/main/resources/META-INF/resources/js/vendor.js
+/src/main/resources/META-INF/resources/js/vendor.min.js
+/src/main/resources/META-INF/resources/js/vendor.min.js.map
+/src/main/resources/META-INF/resources/js/pages/
+/src/main/resources/META-INF/resources/font-awesome/
+/src/main/resources/META-INF/resources/css/
