@@ -4,6 +4,7 @@ import com.jwebmp.plugins.themes.mintontheme.implementations.MintonPageConfigura
 module com.jwebmp.plugins.themes.mintontheme {
 	
 	exports com.jwebmp.plugins.themes.mintontheme;
+	exports com.jwebmp.plugins.themes.mintontheme.ui;
 	exports com.jwebmp.plugins.themes.mintontheme.appsearch;
 	exports com.jwebmp.plugins.themes.mintontheme.faq;
 	exports com.jwebmp.plugins.themes.mintontheme.chat;
@@ -47,6 +48,7 @@ module com.jwebmp.plugins.themes.mintontheme {
 	
 	opens com.jwebmp.plugins.themes.mintontheme.dto to com.fasterxml.jackson.databind;
 	opens com.jwebmp.plugins.themes.mintontheme to com.jwebmp.core;
+	opens com.jwebmp.plugins.themes.mintontheme.ui to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.options to com.jwebmp.core, com.fasterxml.jackson.databind;
 	opens com.jwebmp.plugins.themes.mintontheme.leftsidebar to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.chat to com.jwebmp.core;

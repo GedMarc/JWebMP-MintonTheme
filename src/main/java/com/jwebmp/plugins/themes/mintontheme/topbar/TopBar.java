@@ -41,8 +41,8 @@ public class TopBar
 	
 	private LogoBox logoBox;
 	
-	private AppSearchForm searchForm = new AppSearchForm();
-	private AppSearchBSDropDown searchFormSmallDropDown = new AppSearchBSDropDown();
+	private AppSearchForm searchForm;
+	private AppSearchBSDropDown searchFormSmallDropDown;
 	
 	private TopBarFullScreenButton fullScreenButton = new TopBarFullScreenButton(FontAwesomeIcons.expand_arrows_alt, FontAwesomeIcons.compress_alt);
 	private DropBoxes dropBoxes;
@@ -128,6 +128,7 @@ public class TopBar
 				                                                     .add(this.searchFormSmallDropDown)
 				                                    );
 			}
+
 			if (this.fullScreenButton != null)
 			{
 				this.topbarRightSideLeftMostList.add(new ListItem<>().addClass(Dropdown)

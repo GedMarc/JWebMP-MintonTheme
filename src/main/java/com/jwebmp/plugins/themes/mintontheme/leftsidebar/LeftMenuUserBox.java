@@ -36,26 +36,32 @@ public class LeftMenuUserBox extends DivSimple<LeftMenuUserBox>
         userMenu = new UserOptionsMenu();
     }
 
+    public LeftMenuUserBox setFullNameBinding(String fullNameBinding) {
+        this.fullNameBinding = fullNameBinding;
+        userMenu.setFullNameBinding(fullNameBinding);
+        return this;
+    }
+
     @Override
     public void init()
     {
         if (!isInitialized())
         {
-            Image<?> image = new Image<>();
-            image.bind(profileImageSourceBinding);
+            if(!Strings.isNullOrEmpty(profileImageSourceBinding)) {
+                Image<?> image = new Image<>();
+                image.bind(profileImageSourceBinding);
 
-            image.addAttribute("alt", altBinding == null ? "user-img" : "{{" + altBinding + "}}");
-            image.addClass(Rounded_Circle);
-            image.addClass("avatar-md");
+                image.addAttribute("alt", altBinding == null ? "user-img" : "{{" + altBinding + "}}");
+                image.addClass(Rounded_Circle);
+                image.addClass("avatar-md");
 
-            if (!Strings.isNullOrEmpty(fullNameBinding))
-            {
-                image.addAttribute("title", "{{" + fullNameBinding + "}}");
+                if (!Strings.isNullOrEmpty(fullNameBinding)) {
+                    image.addAttribute("title", "{{" + fullNameBinding + "}}");
+                } else {
+                    image.addAttribute("title", "No Name");
+                }
+                add(image);
             }
-            else {
-                image.addAttribute("title", "Guest User");
-            }
-            add(image);
             add(userMenu);
 
             if(!Strings.isNullOrEmpty(roleNameBinding))
@@ -65,7 +71,7 @@ public class LeftMenuUserBox extends DivSimple<LeftMenuUserBox>
             }
             else
             {
-                Paragraph<?> p = new Paragraph<>("Guest").addClass(Text_Reset);
+                Paragraph<?> p = new Paragraph<>("No Roles").addClass(Text_Reset);
                 add(p);
             }
         }

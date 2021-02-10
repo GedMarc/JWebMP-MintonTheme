@@ -51,8 +51,8 @@ public class LogoBox extends DivSimple<LogoBox>
 		imageSmall.addAttribute(Height, "24");
 		imageSmallDark.addAttribute(Height, "24");
 		
-		imageLarge.addAttribute(Height, "20");
-		imageLargeDark.addAttribute(Height, "20");
+		imageLarge.addAttribute(Height, "70");
+		imageLargeDark.addAttribute(Height, "70");
 		
 		logoSmall.add(imageSmall);
 		logoLarge.add(imageLarge);
