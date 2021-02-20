@@ -71,7 +71,7 @@ public class LeftMenuUserBox extends DivSimple<LeftMenuUserBox>
             }
             else
             {
-                Paragraph<?> p = new Paragraph<>("No Roles").addClass(Text_Reset);
+                Paragraph<?> p = new Paragraph<>("").addClass(Text_Reset);
                 add(p);
             }
         }
