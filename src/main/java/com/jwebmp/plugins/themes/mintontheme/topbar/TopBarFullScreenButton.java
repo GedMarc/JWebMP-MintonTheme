@@ -17,6 +17,7 @@ public class TopBarFullScreenButton extends Link<TopBarFullScreenButton>
 {
 	TopBarFullScreenButton()
 	{
+		setID("topBarFullScreen");
 		setDirectToAddress("#");
 		addClass(Nav_Link);
 		addClass(Dropdown_Toggle);
