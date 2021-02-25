@@ -12,11 +12,11 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 
 import static com.jwebmp.plugins.bootstrap4.navs.BSNavsOptions.Nav_Link;
-import static com.jwebmp.plugins.bootstrap4.options.BSDisplayOptions.None;
-import static com.jwebmp.plugins.bootstrap4.options.BSDisplayOptions.Xl_Block;
+import static com.jwebmp.plugins.bootstrap4.options.BSDisplayOptions.*;
 import static com.jwebmp.plugins.bootstrap4.options.BSMarginOptions.MarginRight_1;
 import static com.jwebmp.plugins.fontawesome5.FontAwesome.icon;
 import static com.jwebmp.plugins.fontawesome5.options.FontAwesomeStyles.Light;
+import static com.jwebmp.plugins.fontawesome5.options.FontAwesomeStyles.Solid;
 import static com.jwebmp.plugins.waveseffect.WavesEffects.Waves_Effect;
 import static com.jwebmp.plugins.waveseffect.WavesEffects.Waves_Light;
 
@@ -31,8 +31,8 @@ public class DefaultMenuDropDown extends BSDropDown<DefaultMenuDropDown>
 	public DefaultMenuDropDown(String label)
 	{
 		setTag("li");
-		addClass(None);
-		addClass(Xl_Block);
+	//	addClass(None);
+		addClass(Block);
 		
 		this.link = addDropDownLink();
 		this.link.addClass(Nav_Link);
@@ -42,7 +42,7 @@ public class DefaultMenuDropDown extends BSDropDown<DefaultMenuDropDown>
 		
 		this.link.setText(label);
 		this.link.setRenderTextBeforeChildren(true);
-		this.link.add(icon(FontAwesomeIcons.chevron_down, Light));
+		this.link.add(icon(FontAwesomeIcons.chevron_down, Solid));
 		
 		this.menu = addDropDownMenu();
 	}
