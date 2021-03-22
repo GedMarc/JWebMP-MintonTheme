@@ -21,8 +21,7 @@ import lombok.experimental.Accessors;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.jwebmp.plugins.bootstrap4.options.BSMarginOptions.MarginBottom_0;
-import static com.jwebmp.plugins.bootstrap4.options.BSMarginOptions.MarginRight_2;
+import static com.jwebmp.plugins.bootstrap4.options.BSMarginOptions.*;
 
 @Getter
 @Setter
@@ -81,6 +80,7 @@ public class Portlet extends BSCard<Portlet> {
     public Link<?> addWidget(IIcon<?, ?> icon, Event<?, ?> onWidgetClick) {
         Link<?> link = new Link<>("javascript:;");
         link.add(icon);
+        icon.getIconComponent().addClass(MarginRight_1);
         link.addEvent(onWidgetClick);
         widgets.add(link);
         return link;
@@ -89,6 +89,7 @@ public class Portlet extends BSCard<Portlet> {
     public Link<?> addReloadWidget(IIcon<?, ?> icon, Event<?, ?> onReload) {
         Link<?> link = new Link<>("javascript:;");
         link.addAttribute("data-toggle", "reload");
+        icon.getIconComponent().addClass(MarginRight_1);
         link.add(icon);
         link.addEvent(onReload);
         widgets.add(link);
@@ -99,6 +100,7 @@ public class Portlet extends BSCard<Portlet> {
         Link<?> link = new Link<>("javascript:;");
         BSCollapse.link(link,content,hideOnStart);
         link.add(icon);
+        icon.getIconComponent().addClass(MarginRight_1);
         link.addEvent(onCollapse);
         widgets.add(link);
         return link;
@@ -107,6 +109,7 @@ public class Portlet extends BSCard<Portlet> {
     public Link<?> addCloseWidget(IIcon<?, ?> icon, boolean hideOnStart, Event<?, ?> onClose) {
         Link<?> link = new Link<>("javascript:;");
         link.addAttribute("data-toggle", "remove");
+        icon.getIconComponent().addClass(MarginRight_1);
         link.add(icon);
         link.addEvent(onClose);
         widgets.add(link);

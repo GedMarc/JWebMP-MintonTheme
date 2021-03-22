@@ -41,6 +41,7 @@ public class TopBarFullScreenButton extends Link<TopBarFullScreenButton>
 		this();
 		FontAwesome<?> icon = FontAwesome.icon(maximizeIcon);
 		add(icon);
+		icon.setID("maximIcon");
 		icon.addClass("noti-icon");
 		icon.addFeature(new FontAwesomeSwapOnClick(icon, maximizeIcon, minimizeIcon));
 	}
