@@ -1,14 +1,13 @@
 package com.jwebmp.plugins.themes.mintontheme.rightsidebar;
 
 import com.jwebmp.core.base.html.DivSimple;
+import com.jwebmp.core.base.html.Italic;
 import com.jwebmp.plugins.themes.mintontheme.chat.RightSideChatWindow;
 import com.jwebmp.plugins.themes.mintontheme.settings.RightSideSettingsWindow;
 import com.jwebmp.plugins.themes.mintontheme.tasks.RightSideTaskWindow;
 import com.jwebmp.plugins.bootstrap4.listgroup.tabs.BSTabContainer;
 import com.jwebmp.plugins.bootstrap4.navs.BSNavTabs;
 import com.jwebmp.plugins.bootstrap4.options.BSPaddingOptions;
-import com.jwebmp.plugins.materialicons.MDIIcon;
-import com.jwebmp.plugins.materialicons.MDIIcons;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -33,6 +32,7 @@ public class RightSideBar extends DivSimple<RightSideBar>
 		
 		addClass("right-bar");
 		this.sidebar.addAttribute("data-simplebar", "");
+		
 		this.sidebar.addClass(H_100);
 		this.overlay.addClass("rightbar-overlay");
 		
@@ -49,7 +49,7 @@ public class RightSideBar extends DivSimple<RightSideBar>
 	
 	public BSTabContainer<?> addChatTab()
 	{
-		BSTabContainer<?> container = this.sidebar.addTab(new MDIIcon<>(MDIIcons.message_text_outline)
+		BSTabContainer<?> container = this.sidebar.addTab(new Italic<>().addClass("mdi mdi-message-text-outline")
 				                                                  .addClass(Block)
 				                                                  .addClass(Margin_Y_1)
 				                                                  .addClass("font-22"), new DivSimple<>(), true);
@@ -62,7 +62,7 @@ public class RightSideBar extends DivSimple<RightSideBar>
 	
 	public BSTabContainer<?> addTasksTab()
 	{
-		BSTabContainer<?> container = this.sidebar.addTab(new MDIIcon<>(MDIIcons.format_list_checks)
+		BSTabContainer<?> container = this.sidebar.addTab(new Italic<>().addClass("mdi mdi-format-list-checks")
 				                                                  .addClass(Block)
 				                                                  .addClass(Margin_Y_1)
 				                                                  .addClass("font-22"), new DivSimple<>());
@@ -75,7 +75,7 @@ public class RightSideBar extends DivSimple<RightSideBar>
 	
 	public BSTabContainer<?> addSettingsTab()
 	{
-		BSTabContainer<?> container = this.sidebar.addTab(new MDIIcon<>(MDIIcons.settings)
+		BSTabContainer<?> container = this.sidebar.addTab(new Italic<>().addClass("mdi mdi-cog-outline")
 				                                                  .addClass(Block)
 				                                                  .addClass(Margin_Y_1)
 				                                                  .addClass("font-22"), new DivSimple<>());

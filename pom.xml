@@ -17,10 +17,6 @@
 
     <url>https://jwebmp.com</url>
 
-    <properties>
-        <jdk.release>15</jdk.release>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -75,16 +71,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.plugins.iconsets</groupId>
-            <artifactId>jwebmp-material-design-icons</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jwebmp.plugins.iconsets</groupId>
-            <artifactId>jwebmp-material-icons</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>RELEASE</version>
@@ -95,14 +81,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <goals>
-                    <goal>jar</goal>
-                </goals>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

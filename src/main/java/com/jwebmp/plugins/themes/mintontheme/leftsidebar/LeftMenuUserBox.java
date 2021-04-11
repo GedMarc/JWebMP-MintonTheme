@@ -9,8 +9,6 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 import org.apache.commons.lang3.RandomUtils;
 
-import java.util.*;
-
 import static com.jwebmp.plugins.bootstrap4.options.BSBorderOptions.Rounded_Circle;
 import static com.jwebmp.plugins.bootstrap4.options.BSTypographyOptions.Text_Center;
 import static com.jwebmp.plugins.bootstrap4.options.BSTypographyOptions.Text_Reset;

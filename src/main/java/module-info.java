@@ -28,8 +28,6 @@ module com.jwebmp.plugins.themes.mintontheme {
 	requires com.jwebmp.plugins.waveseffect;
 
 	requires com.jwebmp.plugins.fontawesome5;
-	requires com.jwebmp.plugins.materialdesignicons;
-	requires com.jwebmp.plugins.materialicons;
 	
 	requires com.jwebmp.core.angularjs;
 

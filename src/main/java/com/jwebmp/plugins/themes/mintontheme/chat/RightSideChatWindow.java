@@ -1,8 +1,7 @@
 package com.jwebmp.plugins.themes.mintontheme.chat;
 
 import com.jwebmp.core.base.html.DivSimple;
-import com.jwebmp.plugins.materialicons.MDIIcon;
-import com.jwebmp.plugins.materialicons.MDIIcons;
+import com.jwebmp.core.base.html.Italic;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -14,7 +13,7 @@ import static com.jwebmp.plugins.bootstrap4.navs.BSNavsAttributes.Role;
 @Setter
 public class RightSideChatWindow extends DivSimple<RightSideChatWindow>
 {
-	private ChatFormSearch chatForm = new ChatFormSearch(new MDIIcon<>(MDIIcons.magnify));
+	private ChatFormSearch chatForm = new ChatFormSearch(new Italic<>().addClass("mdi-magnify"));
 	private ChatGroupsSummary chatGroupsSummary;
 	private ChatsSummary chatFavouritesSummary;
 	private ChatsSummary chatsSummary;

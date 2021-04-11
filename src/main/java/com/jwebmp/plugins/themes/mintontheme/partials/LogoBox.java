@@ -10,6 +10,12 @@ import static com.jwebmp.plugins.bootstrap4.options.BSTypographyOptions.Text_Cen
 
 public class LogoBox extends DivSimple<LogoBox>
 {
+	
+	private Image<?> imageSmallDark;
+	private Image<?> imageLargeDark;
+	private Image<?> imageSmall;
+	private Image<?> imageLarge;
+	
 	public LogoBox()
 	{
 		addClass("logo-box");
@@ -43,10 +49,10 @@ public class LogoBox extends DivSimple<LogoBox>
 		linkDark.add(logoSmallDark);
 		linkDark.add(logoLargeDark);
 		
-		Image<?> imageSmallDark = new Image<>(imgSmallDark);
-		Image<?> imageLargeDark = new Image<>(imgLargeDark);
-		Image<?> imageSmall = new Image<>(imgSmall);
-		Image<?> imageLarge = new Image<>(imgLarge);
+		imageSmallDark = new Image<>(imgSmallDark);
+		imageLargeDark = new Image<>(imgLargeDark);
+		imageSmall = new Image<>(imgSmall);
+		imageLarge = new Image<>(imgLarge);
 		
 		imageSmall.addAttribute(Height, "24");
 		imageSmallDark.addAttribute(Height, "24");
@@ -63,6 +69,50 @@ public class LogoBox extends DivSimple<LogoBox>
 		add(linkDark);
 		add(linkLight);
 		
+		return this;
+	}
+	
+	public Image<?> getImageSmallDark()
+	{
+		return imageSmallDark;
+	}
+	
+	public LogoBox setImageSmallDark(Image<?> imageSmallDark)
+	{
+		this.imageSmallDark = imageSmallDark;
+		return this;
+	}
+	
+	public Image<?> getImageLargeDark()
+	{
+		return imageLargeDark;
+	}
+	
+	public LogoBox setImageLargeDark(Image<?> imageLargeDark)
+	{
+		this.imageLargeDark = imageLargeDark;
+		return this;
+	}
+	
+	public Image<?> getImageSmall()
+	{
+		return imageSmall;
+	}
+	
+	public LogoBox setImageSmall(Image<?> imageSmall)
+	{
+		this.imageSmall = imageSmall;
+		return this;
+	}
+	
+	public Image<?> getImageLarge()
+	{
+		return imageLarge;
+	}
+	
+	public LogoBox setImageLarge(Image<?> imageLarge)
+	{
+		this.imageLarge = imageLarge;
 		return this;
 	}
 }
