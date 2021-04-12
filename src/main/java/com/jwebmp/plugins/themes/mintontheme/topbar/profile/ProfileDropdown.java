@@ -3,6 +3,7 @@ package com.jwebmp.plugins.themes.mintontheme.topbar.profile;
 import com.jwebmp.core.base.html.*;
 import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.core.base.interfaces.IIcon;
+import com.jwebmp.core.htmlbuilder.javascript.events.interfaces.IEvent;
 import com.jwebmp.plugins.bootstrap4.badge.BSBadge;
 import com.jwebmp.plugins.bootstrap4.dropdown.BSDropDown;
 import com.jwebmp.plugins.bootstrap4.dropdown.parts.BSDropDownMenu;
@@ -98,12 +99,12 @@ public class ProfileDropdown extends BSDropDown<ProfileDropdown>
 		super.preConfigure();
 	}
 	
-	public ProfileDropdown addItem(IIcon<?, ?> icon, String text)
+	public ProfileDropdown addItem(IIcon<?, ?> icon, String text, IEvent<?,?>...events)
 	{
-		return addItem(icon, text, null);
+		return addItem(icon, text, null,events);
 	}
 	
-	public ProfileDropdown addItem(IIcon<?, ?> icon, String text, BSBadge<?> badge)
+	public ProfileDropdown addItem(IIcon<?, ?> icon, String text, BSBadge<?> badge, IEvent<?,?>...events)
 	{
 		Link<?> link = new Link<>("javascript:void(0);");
 		link.addClass("dropdown-item");
@@ -120,6 +121,12 @@ public class ProfileDropdown extends BSDropDown<ProfileDropdown>
 			{
 				textSpan.setRenderTextBeforeChildren(true);
 				textSpan.add(badge);
+			}
+		}
+
+		if (events != null) {
+			for (IEvent<?, ?> event : events) {
+				link.addEvent(event);
 			}
 		}
 		this.menu.add(link);

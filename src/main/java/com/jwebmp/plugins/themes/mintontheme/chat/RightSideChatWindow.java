@@ -13,7 +13,7 @@ import static com.jwebmp.plugins.bootstrap4.navs.BSNavsAttributes.Role;
 @Setter
 public class RightSideChatWindow extends DivSimple<RightSideChatWindow>
 {
-	private ChatFormSearch chatForm = new ChatFormSearch(new Italic<>().addClass("mdi-magnify"));
+	private ChatFormSearch chatForm = new ChatFormSearch(new Italic<>().addClass("mdi mdi-magnify"));
 	private ChatGroupsSummary chatGroupsSummary;
 	private ChatsSummary chatFavouritesSummary;
 	private ChatsSummary chatsSummary;
