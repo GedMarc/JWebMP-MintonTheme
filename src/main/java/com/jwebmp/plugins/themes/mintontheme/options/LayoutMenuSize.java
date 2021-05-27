@@ -3,7 +3,7 @@ package com.jwebmp.plugins.themes.mintontheme.options;
 public enum LayoutMenuSize
 {
 	$default,
-	compressed,
+	condensed,
 	compact;
 	
 	@Override

@@ -49,15 +49,17 @@ module com.jwebmp.plugins.themes.mintontheme {
 	opens com.jwebmp.plugins.themes.mintontheme.ui to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.options to com.jwebmp.core, com.fasterxml.jackson.databind;
 	opens com.jwebmp.plugins.themes.mintontheme.leftsidebar to com.jwebmp.core;
+	opens com.jwebmp.plugins.themes.mintontheme.leftsidebar.sidebar to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.chat to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.appsearch to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.pages to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.faq to com.jwebmp.core;
+	opens com.jwebmp.plugins.themes.mintontheme.tasks to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.timeline to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.topbar to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.topbar.dropbox to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.topbar.notifications to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.topbar.megamenu to com.jwebmp.core;
 	opens com.jwebmp.plugins.themes.mintontheme.topbar.profile to com.jwebmp.core;
-	opens com.jwebmp.plugins.themes.mintontheme.leftsidebar.sidebar to com.jwebmp.core;
+	
 }
