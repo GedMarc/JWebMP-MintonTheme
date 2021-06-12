@@ -11,13 +11,19 @@ import lombok.experimental.Accessors;
 @Setter
 public class ContentView extends DivSimple<ContentView>
 {
-	private final LeftSideBar leftSideBar = new LeftSideBar();
-	private final ContentPage contentPage = new ContentPage();
+	private LeftSideBar leftSideBar = new LeftSideBar();
+	private ContentPage contentPage = new ContentPage();
 	
 	public ContentView()
 	{
 		setID("wrapper");
+	}
+	
+	@Override
+	public void init()
+	{
 		add(leftSideBar);
 		add(contentPage);
+		super.init();
 	}
 }

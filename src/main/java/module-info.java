@@ -37,7 +37,7 @@ module com.jwebmp.plugins.themes.mintontheme {
 	requires static lombok;
 	requires org.apache.commons.lang3;
 	requires org.apache.commons.io;
-	
+	 
 
 	provides com.jwebmp.core.services.IPageConfigurator with MintonPageConfigurator;
 	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleInclusions with MintonModuleInclusions;

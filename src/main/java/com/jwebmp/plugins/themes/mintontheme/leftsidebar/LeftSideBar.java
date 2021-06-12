@@ -14,14 +14,14 @@ import static com.jwebmp.plugins.bootstrap4.options.BSColumnOptions.H_100;
 public class LeftSideBar extends DivSimple<LeftSideBar> {
     private DivSimple<?> content = new DivSimple<>();
     private LeftMenuUserBox userBox;
-    private LeftSideBarMenu sideBarMenu = new LeftSideBarMenu();
+    private LeftSideBarMenu sideBarMenu;
     private LogoBox logoBox;
     private String roleNameBinding;
 
     public LeftSideBar() {
         addClass("left-side-menu");
         this.content.addClass(H_100);
-        this.content.addClass("menuitem-active");
+      //  this.content.addClass("menuitem-active");
         this.content.addAttribute("data-simplebar", "");
     }
 
@@ -30,8 +30,11 @@ public class LeftSideBar extends DivSimple<LeftSideBar> {
         if (!isInitialized()) {
             if (userBox != null)
                 this.content.add(this.userBox);
-
-            this.content.add(this.sideBarMenu);
+            
+            if(sideBarMenu != null)
+            {
+                this.content.add(this.sideBarMenu);
+            }
 
             this.content.add(new DivSimple<>().addClass("clearfix"));
 

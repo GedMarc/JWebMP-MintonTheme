@@ -7,6 +7,7 @@ import com.jwebmp.core.base.angular.modules.AngularMessagesModule;
 import com.jwebmp.core.base.html.Body;
 import com.jwebmp.core.base.references.CSSReference;
 import com.jwebmp.core.base.references.JavascriptReference;
+import com.jwebmp.core.base.servlets.enumarations.RequirementsPriority;
 import com.jwebmp.core.generics.WebReference;
 import com.jwebmp.core.services.IPageConfigurator;
 import com.jwebmp.plugins.bootstrap4.BootstrapReferencePool;
@@ -51,7 +52,10 @@ public class MintonPageConfigurator implements IPageConfigurator<MintonPageConfi
 				.addAttribute("disabled", "disabled")
 		);
 		
-		body.addJavaScriptReference(new JavascriptReference("AppJS", 1.0, "js/app.min.js", Integer.MAX_VALUE));
+		//body.addJavaScriptReference(new JavascriptReference("Vendor", 1.0, "js/vendor.min.js", Integer.MIN_VALUE));
+		body.addJavaScriptReference(new JavascriptReference("AppJS", 1.0, "js/app.minton.min.js", Integer.MAX_VALUE - 1)
+		.setPriority(RequirementsPriority.StoneLast));
+		
 	}
 	
 	@Override
