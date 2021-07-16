@@ -11,8 +11,6 @@
     <packaging>jar</packaging>
     <name>Minton Theme</name>
 
-    <version>0.0.0_0-SNAPSHOT</version>
-
     <description>The JWebMP wrapper for the wrapbootstrap theme Minton</description>
 
     <url>https://jwebmp.com</url>
@@ -24,15 +22,33 @@
                 <artifactId>guicedee-bom</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>standalone-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>tests-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${guicedee.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.jwebmp</groupId>
                 <artifactId>jwebmp-bom</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
         </dependencies>
@@ -42,7 +58,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
         </dependency>
 
         <dependency>
@@ -73,48 +88,12 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
 
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>${jdk.release}</source>
-                    <target>${jdk.release}</target>
-                    <release>${jdk.release}</release>
-                    <annotationProcessorPaths>
-                        <annotationProcessorPath>
-                            <groupId>com.guicedee.services</groupId>
-                            <artifactId>hibernate-jpamodelgen</artifactId>
-                            <version>${project.version}</version>
-                        </annotationProcessorPath>
-                        <path>
-                            <groupId>com.guicedee.services</groupId>
-                            <artifactId>jakarta.xml.bind-api</artifactId>
-                            <version>${project.version}</version>
-                        </path>
-                        <annotationProcessorPath>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>1.18.20</version>
-                        </annotationProcessorPath>
-                    </annotationProcessorPaths>
-                    <compilerArguments>
-                        <AaddGeneratedAnnotation>false</AaddGeneratedAnnotation>
-                        <Adebug>true</Adebug>
-                    </compilerArguments>
-                </configuration>
-            </plugin>
-        </plugins>
-
-
         <resources>
             <resource>
                 <directory>src/main/webapp</directory>
@@ -169,41 +148,5 @@
             </resource>
         </resources>
     </build>
-
-    <licenses>
-        <license>
-            <name>GPL 3</name>
-            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <organization>
-        <name>Marc Magon</name>
-        <url>http://jwebmp.com</url>
-    </organization>
-
-    <scm>
-        <url>https://github.com/GedMarc?tab=repositories</url>
-    </scm>
-
-    <developers>
-        <developer>
-            <id>GedMarc</id>
-            <name>Marc Magon</name>
-            <email>marc.magon@gmail.com</email>
-            <url>https://github.com/GedMarc</url>
-        </developer>
-    </developers>
-
-    <issueManagement>
-        <system>Jira</system>
-        <url>https://www.jwebmp.com/jira</url>
-    </issueManagement>
-
-    <ciManagement>
-        <system>TeamCity</system>
-        <url>http://jwebmp.com/teamcity</url>
-    </ciManagement>
 
 </project>
