@@ -42,6 +42,8 @@ module com.jwebmp.plugins.themes.mintontheme {
 	provides com.jwebmp.core.services.IPageConfigurator with MintonPageConfigurator;
 	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleInclusions with MintonModuleInclusions;
 	
+	exports com.jwebmp.plugins.themes.mintontheme.implementations;
+	
 	opens com.jwebmp.plugins.themes.mintontheme.implementations to com.google.guice;
 	
 	opens com.jwebmp.plugins.themes.mintontheme.dto to com.fasterxml.jackson.databind;
