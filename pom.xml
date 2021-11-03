@@ -12,7 +12,7 @@
     <artifactId>jwebmp-plugins-themes-minton</artifactId>
     <packaging>jar</packaging>
     <name>Minton Theme</name>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <description>The JWebMP wrapper for the wrapbootstrap theme Minton</description>
 
     <url>https://jwebmp.com</url>
