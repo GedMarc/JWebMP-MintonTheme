@@ -29,7 +29,7 @@ module com.jwebmp.plugins.themes.mintontheme {
 
 	requires com.jwebmp.plugins.fontawesome5;
 	
-	requires com.jwebmp.core.angularjs;
+	requires com.jwebmp.core.angular;
 
 	requires com.guicedee.guicedservlets.undertow;
 
